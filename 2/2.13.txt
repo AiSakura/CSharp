@@ -1,0 +1,28 @@
+//2.13 ƒана строка из 256 английских букв. «аписать через пробел 30 символов этой строки, сто€щих на случайных местах. ∆елательно сделать только одно обращение к классу Random.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string list = "zxcvbnmklpoijhuygftrfdresawqzasewqxfdcvgbhnjkmlpoiuytrewqazxbzvxvcvcvchgfhfguytrtryrtrtrtrgfubdshgrishkliwohaiorioaehglaoe;rhgloaihetihuoujhetiofujhbieot8yhagvbueriagyoear;gheu9u80oahgaeirhaeuigawet85igohtrjhntrjhotjhtoiytjohtiohjtlrdmntorjhotruyryoilyrrh";
+            int count = 0;
+            while (count <= 30)
+            {
+                Random rand = new Random();
+                int temp = rand.Next(257);
+                Console.WriteLine(list[temp] + "\t");
+                count++;
+            }
+            Console.ReadKey();
+        }
+       
+       
+    }
+}

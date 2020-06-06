@@ -1,0 +1,26 @@
+//2.8
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+using System.Globalization;
+
+namespace ConsoleApp6
+{
+    class Task_1
+    {
+
+        public static void Main(string[] args)
+        {
+            for (int month = 1; month < 13; month++)
+            {
+                DateTime dateTime = new DateTime(1, month, 1);
+                Console.WriteLine(dateTime.ToString("MMMM", CultureInfo.GetCultureInfo("fr-FR")));
+            }
+            Console.ReadKey();
+        }
+    }
+}

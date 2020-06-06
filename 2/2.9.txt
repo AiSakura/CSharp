@@ -1,0 +1,28 @@
+//2.9
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            string signs = "abcdefghijklmnopqrstuvwxyz";
+            int sign;
+            string res;
+
+            for (int i = 1; i <= 4; i++)
+            {
+                sign = rnd.Next(0, 26);
+                res = string.Concat(signs[sign]);
+                Console.Write(res);
+            }
+            Console.ReadKey();
+        }
+    }
+}
